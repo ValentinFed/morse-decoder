@@ -44,11 +44,11 @@ function decode(expr) {
       morce.push(expr.slice(i,i+10))
     }
     
-    let words = morce.map(letter => {
+    let letters = morce.map(letter => {
        return letter === '**********' ? ' ' : MORSE_TABLE[letter.toString().replace(/10/gi,'.').replace(/11/gi,'-').replace(/00/gi,'')]
     })
     
-    return words.join('')
+    return letters.join('')
 }
 
 module.exports = {
